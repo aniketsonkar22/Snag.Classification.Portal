@@ -35,6 +35,14 @@ submitBtn.addEventListener('click', async () => {
     }
 });
 
+const cancelBtn = document.getElementById('cancelBtn');
+cancelBtn.addEventListener('click', () => {
+    apiInput.value = '';
+    outputSection.classList.add('hidden');
+    errorSection.classList.add('hidden');
+    loading.classList.add('hidden');
+});
+
 // API call function - Replace with your actual API
 async function callAPI(inputValue) {
     // Replace this URL with your actual API endpoint
